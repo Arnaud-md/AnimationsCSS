@@ -1,4 +1,35 @@
 @import url(https://fonts.googleapis.com/css?family=Dancing+Script:regular,500,600,700);
+@keyframes t_heart_grow {
+  0% {
+    scale: 100%;
+  }
+  50% {
+    scale: 200%;
+  }
+  100% {
+    scale: 100%;
+  }
+}
+@keyframes t_heart_translate {
+  0% {
+    translate: 0px 0px;
+  }
+  25% {
+    translate: 0px -100px;
+  }
+  35% {
+    translate: 50px -100px;
+  }
+  55% {
+    translate: -50px -100px;
+  }
+  65% {
+    translate: 0px -100px;
+  }
+  100% {
+    translate: 0px 0px;
+  }
+}
 @keyframes rotation {
   0% {
       rotate: 0deg;
@@ -82,4 +113,70 @@ body{
 }
 .centered_div:hover{
   animation: dilate 5s linear infinite, change_color 5s linear infinite, turn 1s linear;
+}
+.heart{
+  position: relative;
+  width:100px;
+  height:90px;
+  animation: t_heart_grow 5s linear infinite, t_heart_translate 5s linear infinite;
+}
+.heart_left {
+  position: absolute;
+  width:50px;
+  height:80px;
+  background-color: red;
+  border-radius: 50% 50% 0% 0%;
+  top:0px;
+  left:42px;
+  rotate:45deg;
+  
+}
+.heart_right {
+  position: absolute;
+  width:50px;
+  height:80px;
+  background-color: red;
+  border-radius: 50% 50% 0% 0%;
+  top:0px;
+  left:20px;
+  rotate:-45deg;
+}
+.table{
+  @media screen and (max-width: 576px) {
+    width:100%;
+    max-width:100%;
+    height:100%;
+    max-height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+.table-2{
+  @media screen and (max-width: 576px) {
+    width:100%;
+    max-width:100%;
+  }
+}
+
+.td {
+  @media screen and (max-width: 576px) {
+  display: none;
+  }
+}
+.big-screen-table{
+  width:100%;
+  max-width:100%;
+  @media screen and (max-width: 576px) {
+    display: none;
+  }
+}
+.small-screen-list{
+  width:100%;
+  height:100%;
+  max-height: 100%;
+  max-width:100%;
+  @media screen and (min-width: 576px) {
+    display: none;
+  }
 }
