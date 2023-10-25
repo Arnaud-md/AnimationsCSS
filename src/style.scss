@@ -1,0 +1,27 @@
+.container{
+  width:50px;
+  height:50px;
+  animation: my-animation 1s linear infinite;
+}
+.border{
+  border:5px solid white;
+  border-right: 5px solid blue;
+  border-radius: 50%;
+}
+.spinner{
+  width:50px;
+  height:50px;
+  animation: my-animation 10s linear infinite;
+}
+@keyframes my-animation {
+  0% {
+      rotate: 0deg;
+  }
+  50% {
+      rotate: 180deg;
+  }
+  100% {
+      rotate:360deg;
+  }
+}
+
