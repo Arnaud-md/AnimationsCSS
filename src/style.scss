@@ -103,8 +103,11 @@ body{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content:flex-start;
   align-content: center;
+  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
 }
 .centered_div{
   font-family:'Dancing Script';
@@ -141,21 +144,37 @@ body{
   left:20px;
   rotate:-45deg;
 }
+
+table {
+  border-collapse: collapse;
+}
+
+td, th {
+  border: 1px solid black;
+}
+
+.container_table{
+  height:100%;
+}
 .table{
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content:flex-start;
+  justify-content:left;
   @media screen and (max-width: 576px) {
-    width:100%;
-    max-width:100%;
-    height:100%;
-    max-height: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+
   }
 }
 .table-2{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items:flex-start;
+  justify-content:left;
   @media screen and (max-width: 576px) {
-    width:100%;
-    max-width:100%;
+
   }
 }
 
@@ -165,17 +184,14 @@ body{
   }
 }
 .big-screen-table{
-  width:100%;
-  max-width:100%;
+
   @media screen and (max-width: 576px) {
     display: none;
   }
 }
 .small-screen-list{
-  width:100%;
-  height:100%;
-  max-height: 100%;
-  max-width:100%;
+
+
   @media screen and (min-width: 576px) {
     display: none;
   }
